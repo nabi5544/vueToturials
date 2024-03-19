@@ -1,22 +1,24 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  
-   <NewCompnenttest />
-   <DataPassComponent msg="how to pass data from script to html tags"/>
-   <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
+  <event msg="Event AND Two way binding ."/>
+  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <test msg="Welcome to Your Vue.js App"/>
+   
 </template>
 
 <script>
+import event from './components/eventsTwowayModalBinding.vue'
+
 import HelloWorld from './components/HelloWorld.vue'
-import NewCompnenttest from './components/NewCompnent.vue'
-import DataPassComponent from './components/DataPassComponent.vue'
+import test from './components/myFirstComponent.vue'
 
 export default {
-  name: 'AppTest', 
-  components: { 
+  name: 'App',
+  components: {
+    event,
     HelloWorld,
-    NewCompnenttest,
-     DataPassComponent  
+test,
+
   }
 }
 </script>

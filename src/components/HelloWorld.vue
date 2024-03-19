@@ -1,32 +1,48 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1> 
+    <h1>{{ msg }}</h1>
     <p>
       For a guide and recipes on how to configure / customize this project,<br>
       check out the
       <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
+
+    
     </p>
-    <h3>Installed CLI Plugins</h3>
-    <ul>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint" target="_blank" rel="noopener">eslint</a></li>
-    </ul>
-    <h3>Essential Links</h3>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank" rel="noopener">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Twitter</a></li>
-      <li><a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a></li>
-    </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
-      <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
-      <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-    </ul>
+    
+  </div>
+  <div>
+  <h1>Two way Binding.</h1>
+  <input type="text" v-model="input_value">
+  <h3>{{ input_value }}</h3>
+
+  <h1>Get Input Field Values using Two way Binding.</h1>
+  <input type="text" v-model="email" placeholder="Email">
+  <input type="text" v-model="name" placeholder="Name">
+  <button v-on:click="values()">Get Values</button>
+
+  <h4>Input Field Values</h4>
+  <p>Name: {{ name }}  Email:{{ email }}</p>
+
+  <h4>Get Select Boxes Values</h4>
+  java
+  <input type="checkbox" v-model="checkbox" value="java" id="java">
+
+  node
+  <input type="checkbox" v-model="checkbox" value="node" id="node">
+
+  js
+  <input type="checkbox" v-model="checkbox" value="js" id="js1">
+  <h5>{{checkbox}}</h5>
+  <h4>Get Radio Button Values</h4>
+   <lable for="male">male</lable>
+  <input type="radio" v-model="radio" value="male" name="radio" id="male">
+
+  <lable for="female">female</lable>
+  <input type="radio" v-model="radio" value="female" name="radio"  id="female">
+
+  <lable for="gay">gay</lable>
+  <input type="radio" v-model="radio" value="gay" name="radio"  id="gay">
+  <h5>{{radio}}</h5>
   </div>
 </template>
 
@@ -35,24 +51,30 @@ export default {
   name: 'HelloWorld',
   props: {
     msg: String
-  }
+  },
+  data(){
+    return {
+      count:0,
+      input_value:0,
+      email:null,
+      name:null,
+      checkbox:[],
+       radio:null,
+    }
+  },
+  methods:{
+    click(){
+      alert('testing');
+    },
+    
+     values(){
+     alert("Name: "+this.name+ "Email:"+this.email);
+    },
+  },
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
+
 </style>
