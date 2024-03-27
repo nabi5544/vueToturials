@@ -1,5 +1,6 @@
 <template>
   <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
+  <htmlbindingComponent/>
   <reuseComponent />
   <event msg="Event AND Two way binding ."/>
   <HelloWorld msg="Welcome to Your Vue.js App"/>
@@ -13,6 +14,7 @@ import event from './components/eventsTwowayModalBinding.vue'
 
 import HelloWorld from './components/HelloWorld.vue'
 import test from './components/myFirstComponent.vue'
+import htmlbindingComponent from './components/htmlbindingComponent.vue'
 
 export default {
   name: 'App',
@@ -21,7 +23,7 @@ export default {
     HelloWorld,
 test,
 reuseComponent,
-
+htmlbindingComponent,
   }
 }
 </script>
