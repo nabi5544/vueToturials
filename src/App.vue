@@ -1,5 +1,6 @@
 <template>
   <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
+  <slotchildComponent/>
   <htmlbindingComponent/>
   <reuseComponent />
   <event msg="Event AND Two way binding ."/>
@@ -9,6 +10,7 @@
 </template>
 
 <script>
+import slotchildComponent from './components/slotchildComponent.vue'
 import reuseComponent from './components/reuseComponent.vue'
 import event from './components/eventsTwowayModalBinding.vue'
 
@@ -19,6 +21,7 @@ import htmlbindingComponent from './components/htmlbindingComponent.vue'
 export default {
   name: 'App',
   components: {
+     slotchildComponent,
     event,
     HelloWorld,
 test,
