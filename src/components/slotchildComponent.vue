@@ -1,18 +1,24 @@
+<!-- ParentComponent.vue -->
 <template>
-<h1>Slots</h1>
-
-
+  <div>
+    <h1>Slots</h1>
+    <ChildComponentnew>
+      <h1>slot child testing</h1>
+    </ChildComponentnew>
+  </div>
 </template>
 
 <script>
+import ChildComponentnew from './childComponent.vue';
+
 export default {
-    name: 'slottestingComponent.',
-    
-   
-   
-}
+  name: 'ParentComponent',
+  components: {
+    ChildComponentnew
+  }
+};
 </script>
 
-<style>
-
+<style scoped>
+/* Parent component styles go here */
 </style>
