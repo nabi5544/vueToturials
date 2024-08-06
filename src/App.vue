@@ -10,7 +10,9 @@
 <button @click="tab='HelloWorld',msg='Welcome to Your Vue.js App'">HelloWorld</button>
 
 <button @click="tab='test',msg='Welcome to Your Vue.js App'">test</button>
-
+ <teleport to="#teleport_footer">
+ <teleportComponent/>
+ </teleport>
 
 <component :is="tab" :msg="msg"/>
 
@@ -31,7 +33,7 @@ import event from './components/eventsTwowayModalBinding.vue'
 import HelloWorld from './components/HelloWorld.vue'
 import test from './components/myFirstComponent.vue'
 import htmlbindingComponent from './components/htmlbindingComponent.vue'
-
+import teleportComponent from './components/teleportComponent.vue'
 export default {
   name: 'App',
   components: {
@@ -41,6 +43,7 @@ export default {
 test,
 reuseComponent,
 htmlbindingComponent,
+teleportComponent,
   },
    data() {
         return {
