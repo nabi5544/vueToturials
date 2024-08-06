@@ -1,11 +1,25 @@
 <template>
   <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
-  <slotchildComponent/>
+  <h1>Dynamic Components.</h1>
+
+<button @click="tab='slotchildComponent'">slotchildComponent</button>
+<button @click="tab='htmlbindingComponent'">htmlbindingComponent</button>
+<button @click="tab='reuseComponent'">reuseComponent</button>
+<button @click="tab='event',msg='Event AND Two way binding .'">Event AND Two way binding</button>
+
+<button @click="tab='HelloWorld',msg='Welcome to Your Vue.js App'">HelloWorld</button>
+
+<button @click="tab='test',msg='Welcome to Your Vue.js App'">test</button>
+
+
+<component :is="tab" :msg="msg"/>
+
+  <!-- <slotchildComponent/>
   <htmlbindingComponent/>
-  <reuseComponent />
-  <event msg="Event AND Two way binding ."/>
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
-  <test msg="Welcome to Your Vue.js App"/>
+  <reuseComponent /> -->
+  <!-- <event msg="Event AND Two way binding ."/> -->
+  <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
+  <!-- <test msg="Welcome to Your Vue.js App"/> -->
    
 </template>
 
@@ -27,7 +41,13 @@ export default {
 test,
 reuseComponent,
 htmlbindingComponent,
-  }
+  },
+   data() {
+        return {
+tab:"",
+msg:"",
+        }
+    }
 }
 </script>
 
