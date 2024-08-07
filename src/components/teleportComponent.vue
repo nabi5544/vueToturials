@@ -3,7 +3,7 @@
   <div>
     <!-- Slot content will be inserted here -->
     <!-- <slot></slot> -->
-   <h1>footer</h1>
+   <h1>newfooter</h1>
   </div>
 </template>
 
