@@ -10,6 +10,8 @@
 <button @click="tab='HelloWorld',msg='Welcome to Your Vue.js App'">HelloWorld</button>
 
 <button @click="tab='test',msg='Welcome to Your Vue.js App'">test</button>
+<button @click="tab='lifecycle1Component',msg='Before and After create'">Life cycle Toturial 1</button>
+<button @click="tab='lifecycle2Component',msg='Before and After mount'">Life cycle Toturial 2</button>
  <teleport to="#teleport_footer">
  <teleportComponent/>
  </teleport>
@@ -34,6 +36,8 @@ import HelloWorld from './components/HelloWorld.vue'
 import test from './components/myFirstComponent.vue'
 import htmlbindingComponent from './components/htmlbindingComponent.vue'
 import teleportComponent from './components/teleportComponent.vue'
+import lifecycle1Component from './components/lifecycle1Component.vue'
+import lifecycle2Component from './components/lifecycle2Component.vue'
 export default {
   name: 'App',
   components: {
@@ -44,6 +48,8 @@ test,
 reuseComponent,
 htmlbindingComponent,
 teleportComponent,
+lifecycle1Component,
+lifecycle2Component,
   },
    data() {
         return {
