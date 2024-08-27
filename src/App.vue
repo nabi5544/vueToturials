@@ -1,7 +1,17 @@
 <template>
   <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
-  <h1>Dynamic Components.</h1>
 
+<h1>Router Links.</h1>
+<router-link to="/home"><button>Home</button></router-link>
+<router-link to="/about"><button>About</button></router-link>
+<router-link to="/profile/ahmad"><button>ahmad Profile</button></router-link>
+<router-link to="/profile/waqar"><button>waqar Profile</button></router-link>
+<router-link to="/profile/kashif"><button>kashif Profile</button></router-link>
+<router-view></router-view>
+
+
+  <h1>Dynamic Components.</h1>
+ 
 <button @click="tab='slotchildComponent'">slotchildComponent</button>
 <button @click="tab='htmlbindingComponent'">htmlbindingComponent</button>
 <button @click="tab='reuseComponent'">reuseComponent</button>
